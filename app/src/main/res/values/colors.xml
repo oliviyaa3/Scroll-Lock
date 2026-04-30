@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="primary_cyan">#00F0FF</color>
+<color name="secondary_pink">#FF46A2</color>
+<color name="highlight_yellow">#FFFF00</color>
+<color name="warning_orange">#EE4B2B</color>
+
+<color name="background_dark">#2E3866</color>
+<color name="surface_dark">#3A4578</color>
+<color name="card_dark">#454E8A</color>
+
+<color name="text_white">#FFFFFF</color>
+<color name="text_gray">#B0B5D6</color>
+</resources>
