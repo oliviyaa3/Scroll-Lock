@@ -26,7 +26,6 @@ class MainViewModel(private val appPreferences: AppPreferences) : ViewModel() {
     val uiState: StateFlow<MainUiState> = _uiState.asStateFlow()
 
     init {
-        // UPDATED: Initialize blockedApps map strictly for the 3 target apps
         val savedBlockedApps = appPreferences.getBlockedApps()
         val targetApps = listOf("Instagram", "X", "YouTube")
 

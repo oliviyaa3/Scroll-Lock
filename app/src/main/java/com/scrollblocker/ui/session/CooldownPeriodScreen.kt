@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlin.math.roundToInt
 
-// IMPORTANT: Make sure these match your actual package name!
 import com.scrollblocker.ui.theme.BackgroundDark
 import com.scrollblocker.ui.theme.CardDark
 import com.scrollblocker.ui.theme.PrimaryCyan
@@ -38,7 +37,7 @@ import com.scrollblocker.ui.theme.WarningOrange
 
 @Composable
 fun CooldownPeriodScreen(
-    // We pass the chosen minutes and the chosen mode back to the nav graph
+    // Pass the chosen minutes and the chosen mode back to the nav graph
     onGetStarted: (Int, String) -> Unit
 ) {
     // State for the slider (1 to 60 mins)
@@ -57,7 +56,7 @@ fun CooldownPeriodScreen(
         verticalArrangement = Arrangement.Center
     ) {
 
-        // 1. THE IMAGE (Ice / Relax concept)
+        // 1. THE IMAGE (Ice)
         Box(
             modifier = Modifier
                 .size(100.dp)

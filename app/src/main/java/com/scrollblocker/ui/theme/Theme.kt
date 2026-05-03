@@ -4,7 +4,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 
-// Map your new colors to the global Material Theme!
 private val NoScrollColorScheme = darkColorScheme(
     primary = PrimaryCyan,
     onPrimary = BackgroundDark,
@@ -29,9 +28,8 @@ private val NoScrollColorScheme = darkColorScheme(
 
 @Composable
 fun NoScrollTheme(
-    // We force this to true because the new app design is strictly Dark/Neon!
     darkTheme: Boolean = true,
-    dynamicColor: Boolean = false, // Keep false to enforce your custom branding
+    dynamicColor: Boolean = false, 
     content: @Composable () -> Unit
 ) {
     MaterialTheme(

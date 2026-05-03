@@ -9,7 +9,6 @@ data class MainUiState(
     val isBlockingEnabled: Boolean = true,
     val blockingMode: BlockingMode = BlockingMode.BLOCK_ALL,
 
-    // UPDATED: Only the 3 apps you requested!
     val blockedApps: Map<String, Boolean> = mapOf(
         "Instagram" to true,
         "X" to true,
@@ -22,7 +21,7 @@ data class MainUiState(
     val selectedPauseDurationMinutes: Int = 1, // Slider Value
     val pauseTimeRemainingSeconds: Long = 0,   // Timer Countdown
 
-    // NEW: Session & Cooldown State
+    // Session & Cooldown State
     val dailyLimitMinutes: Int = 15,
     val cooldownMinutes: Int = 15,
     val cooldownMode: String = "SCROLL" // "SCROLL" or "SHORTS"

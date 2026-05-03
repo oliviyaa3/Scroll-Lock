@@ -46,7 +46,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-// IMPORTING YOUR NEW CENTRALIZED COLORS
 import com.scrollblocker.ui.theme.BackgroundDark
 import com.scrollblocker.ui.theme.CardDark
 import com.scrollblocker.ui.theme.PrimaryCyan
@@ -74,7 +73,6 @@ fun AccessibilityPermissionScreen(
         label = "contentAlpha"
     )
 
-    // Updated to use your dark theme colors
     val gradientBrush = Brush.verticalGradient(
         colors = listOf(
             BackgroundDark,
@@ -219,7 +217,7 @@ fun AccessibilityPermissionScreen(
                 )
                 InstructionItem(number = "1", text = "Tap 'Open Settings' below")
                 Spacer(modifier = Modifier.height(14.dp))
-                InstructionItem(number = "2", text = "Find 'ScrollBlocker' in the list")
+                InstructionItem(number = "2", text = "Find 'ScrollLock' in the list")
                 Spacer(modifier = Modifier.height(14.dp))
                 InstructionItem(number = "3", text = "Toggle the switch ON")
             }
@@ -230,7 +228,6 @@ fun AccessibilityPermissionScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.alpha(contentAlpha)
             ) {
-                // REMOVED: StepIndicator used to be here!
 
                 Button(
                     onClick = onOpenSettings,
@@ -283,7 +280,7 @@ private fun InstructionItem(number: String, text: String) {
                 style = MaterialTheme.typography.labelMedium.copy(
                     fontWeight = FontWeight.Bold
                 ),
-                color = BackgroundDark // Dark text on Cyan circle
+                color = BackgroundDark
             )
         }
         Spacer(modifier = Modifier.width(14.dp))

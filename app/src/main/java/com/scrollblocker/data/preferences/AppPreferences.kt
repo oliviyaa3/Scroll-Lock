@@ -21,8 +21,6 @@ class AppPreferences(context: Context) {
         private const val KEY_BLOCKING_MODE = "blocking_mode"
         private const val KEY_BLOCKED_APPS = "blocked_apps"
         private const val KEY_PAUSE_END_TIME = "pause_end_time"
-
-        // NEW: Keys for your Daily Limit and Cooldown features
         private const val KEY_DAILY_LIMIT_MINUTES = "daily_limit_minutes"
         private const val KEY_COOLDOWN_MINUTES = "cooldown_minutes"
         private const val KEY_COOLDOWN_MODE = "cooldown_mode"
@@ -56,7 +54,6 @@ class AppPreferences(context: Context) {
             .apply()
     }
 
-    // UPDATED: Now only defaults to the 3 specific apps
     fun getBlockedApps(): Set<String> =
         prefs.getStringSet(KEY_BLOCKED_APPS, setOf("Instagram", "X", "YouTube")) ?: setOf("Instagram", "X", "YouTube")
 
@@ -79,8 +76,6 @@ class AppPreferences(context: Context) {
         val endTime = getPauseEndTime()
         return endTime > System.currentTimeMillis()
     }
-
-    // --- NEW: GETTERS AND SETTERS FOR DAILY LIMIT & COOLDOWN ---
 
     fun getDailyLimitMinutes(): Int =
         prefs.getInt(KEY_DAILY_LIMIT_MINUTES, 15) // Default to 15 mins

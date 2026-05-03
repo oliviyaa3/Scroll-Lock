@@ -33,10 +33,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlin.math.roundToInt
 
-// IMPORTANT: Ensure this matches your actual ViewModel package!
 import com.scrollblocker.viewmodel.BlockingMode
 
-// YOUR NEW COLOR PALETTE
 import com.scrollblocker.ui.theme.BackgroundDark
 import com.scrollblocker.ui.theme.CardDark
 import com.scrollblocker.ui.theme.PrimaryCyan
@@ -66,7 +64,7 @@ fun HomeScreen(
     onPauseDurationChange: (Int) -> Unit,
     onStartPauseTimer: () -> Unit,
 
-    // NEW: We added this to check accessibility status!
+    // Check accessibility status
     isAccessibilityGranted: Boolean = true
 ) {
     // Background Gradient
@@ -271,7 +269,7 @@ fun HomeScreen(
                     HorizontalDivider(color = SurfaceDark) // Note: Used HorizontalDivider for Material3
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // ALWAYS SHOW THE 3 APPS: Instagram, YouTube, X
+                    // SHOW THE 3 APPS
                     val targetApps = listOf("Instagram", "YouTube", "X")
 
                     targetApps.forEach { appName ->

@@ -22,7 +22,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Best practice is to call this before anything else in onCreate
         enableEdgeToEdge()
 
         val prefs = AppPreferences(applicationContext)

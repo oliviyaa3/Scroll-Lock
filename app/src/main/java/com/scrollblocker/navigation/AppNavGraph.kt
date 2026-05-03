@@ -9,7 +9,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
-// IMPORTANT: I added the import for your new Session screen here!
 import com.scrollblocker.ui.session.SessionConfigurationScreen
 import com.scrollblocker.ui.permission.AccessibilityPermissionScreen
 import com.scrollblocker.ui.welcome.WelcomeScreen
@@ -59,7 +58,7 @@ fun AppNavGraph(viewModel: MainViewModel) {
                 if (navController.currentDestination?.route != Destinations.PERMISSION &&
                     navController.currentDestination?.route != Destinations.WELCOME &&
                     navController.currentDestination?.route != Destinations.SESSION_CONFIG &&
-                    navController.currentDestination?.route != Destinations.COOLDOWN_CONFIG) { // <-- Added check
+                    navController.currentDestination?.route != Destinations.COOLDOWN_CONFIG) {
                     navController.navigate(Destinations.PERMISSION) {
                         popUpTo(Destinations.HOME) { inclusive = true }
                     }
@@ -91,7 +90,7 @@ fun AppNavGraph(viewModel: MainViewModel) {
         composable(Destinations.SESSION_CONFIG) {
             SessionConfigurationScreen(
                 onContinue = { selectedMinutes ->
-                    // Save the limit!
+                    // Save the limit
                     viewModel.setDailyLimitMinutes(selectedMinutes)
                     navController.navigate(Destinations.COOLDOWN_CONFIG)
                 }
@@ -101,7 +100,7 @@ fun AppNavGraph(viewModel: MainViewModel) {
         composable(Destinations.COOLDOWN_CONFIG) {
             com.scrollblocker.ui.session.CooldownPeriodScreen(
                 onGetStarted = { cooldownMinutes, selectedOption ->
-                    // Save the cooldown settings!
+                    // Save the cooldown settings
                     viewModel.setCooldownConfig(cooldownMinutes, selectedOption)
 
                     // Turn on blocking and set mode to Specific Apps

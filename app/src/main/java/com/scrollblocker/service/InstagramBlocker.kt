@@ -19,7 +19,6 @@ object InstagramBlocker {
     private var lastCheckTime = 0L
     private const val CHECK_INTERVAL_MS = 400L
 
-    // NEW: Tracks when the scroll cooldown started
     private var scrollCooldownStartTime = 0L
 
     fun handleEvent(service: AccessibilityService, event: AccessibilityEvent, rootNode: AccessibilityNodeInfo?, mode: EnforcementMode) {
